@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0d16">
+<meta name="description" content="Arda Is Games — bağımsız oyunları keşfet, hemen oyna.">
+<title>Arda Is Games — Bağımsız Oyunlar</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.cover.football{background:radial-gradient(circle at 50% 48%,#234b45 0,#142a31 42%,#111827 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.cover.football:before,.cover.football:after{content:"";position:absolute;border:1px solid rgba(94,234,212,.22);border-radius:50%;width:230px;height:230px}
+.cover.football:after{width:170px;height:170px}
+.football-ball{font-size:76px;filter:drop-shadow(0 12px 22px rgba(0,0,0,.45));z-index:1}
+
+/* YENİ ALT BÖLÜM */
+.about-section{position:relative;overflow:hidden;margin:30px auto 0;padding:68px 6.8%;border:1px solid rgba(153,126,255,.22);border-radius:24px;background:radial-gradient(ellipse at 90% 0%,rgba(111,83,190,.17),transparent 42%),linear-gradient(135deg,#151827 0%,#101923 100%)}
+.about-section:before{content:"";position:absolute;width:300px;height:300px;border:1px solid rgba(91,225,211,.10);border-radius:50%;right:-120px;bottom:-190px;pointer-events:none}
+.about-top{max-width:700px;position:relative;z-index:1}
+.about-kicker{display:inline-flex;align-items:center;gap:9px;color:#65e6d5;font-size:10px;font-weight:800;letter-spacing:2px;margin:0 0 15px}
+.about-kicker:before{content:"";width:7px;height:7px;border-radius:50%;background:#65e6d5;box-shadow:0 0 12px #65e6d5}
+.about-section h2{font-size:clamp(28px,4vw,43px);line-height:1.13;letter-spacing:-1.6px;margin:0 0 14px;color:#f4f3ff}
+.about-section h2 span{background:linear-gradient(90deg,#a78bfa,#e879c8,#65dfd4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.about-lead{max-width:620px;color:#aab6c8;font-size:14px;line-height:1.85;margin:0}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px;position:relative;z-index:1}
+.feature-card{padding:21px 20px 22px;border:1px solid rgba(255,255,255,.08);border-radius:16px;background:rgba(12,17,29,.62);transition:transform .25s ease,border-color .25s ease,background .25s ease}
+.feature-card:hover{transform:translateY(-5px);border-color:rgba(116,224,216,.35);background:rgba(22,31,47,.9)}
+.feature-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(145deg,rgba(157,121,255,.2),rgba(77,218,207,.12));color:#8de9df;font-size:20px;margin-bottom:17px}
+.feature-card h3{font-size:14px;margin:0 0 8px;color:#f2f3fb}
+.feature-card p{font-size:12px;line-height:1.7;color:#91a0b4;margin:0}
+.about-cta{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);position:relative;z-index:1}
+.about-cta p{font-size:13px;color:#c3cadd;margin:0}
+.about-cta a{display:inline-flex;align-items:center;gap:18px;padding:13px 18px;border-radius:10px;background:linear-gradient(100deg,#8d6cff,#b16dff);color:white;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap;transition:transform .2s,filter .2s}
+.about-cta a:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.site-footer{margin-top:0;padding:34px 6.8% 22px;border-top:1px solid rgba(255,255,255,.09);background:#090c14}
+.footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:35px;padding-bottom:28px}
+.footer-brand .logo{display:inline-flex;margin-bottom:12px}
+.footer-brand p{max-width:300px;color:#8491a5;font-size:11px;line-height:1.8;margin:0}
+.footer-column h4{font-size:10px;letter-spacing:1.5px;color:#dfe4f2;margin:5px 0 14px}
+.footer-column a{display:block;width:max-content;color:#8e9aaf;text-decoration:none;font-size:11px;margin:10px 0;transition:color .2s}
+.footer-column a:hover,.footer-bottom a:hover{color:#65e6d5}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:15px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07);color:#657286;font-size:10px}
+.footer-bottom a{color:#9aa7ba;text-decoration:none}
+@media(max-width:700px){
+ .about-section{padding:38px 22px;margin-top:20px;border-radius:18px}
+ .feature-grid{grid-template-columns:1fr;gap:10px;margin-top:25px}
+ .feature-card{display:grid;grid-template-columns:42px 1fr;column-gap:13px;padding:16px}
+ .feature-icon{grid-row:span 2;margin:0}
+ .feature-card h3{align-self:end}
+ .about-cta{align-items:flex-start;flex-direction:column}
+ .footer-main{grid-template-columns:1fr 1fr;gap:25px}
+ .footer-brand{grid-column:1/-1}
+ .footer-bottom{align-items:flex-start;flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#"><span class="logo-icon">P</span> Arda Is Games</a>
+  <nav><a href="#games">Oyunlar</a><a href="#how">Hakkımızda</a></nav>
+  <a class="nav-button" href="#games">Oyunları keşfet ↗</a>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow"><i></i> BAĞIMSIZ OYUN STÜDYOSU</p>
+    <h1>Python oyunların.<br><em>Yeni bir dünyada.</em></h1>
+    <p class="intro">Kendi geliştirdiğin oyunları tek bir yerde yayınla. Oyuncular indirme yapmadan, doğrudan tarayıcılarında oynasın.</p>
+    <a class="button" href="#games">Oyun kütüphanesine git <b>→</b></a>
+    <p class="note">Ücretsiz başlangıç · Mobil uyumlu tasarım</p>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="ring ring1"></div><div class="ring ring2"></div><div class="core">✦</div>
+    <div class="float f1">PYTHON <strong>+</strong> GAME</div><div class="float f2">PLAY ANYWHERE ↗</div>
+    <div class="stars">✧　·　✦　·　✧</div>
+  </div>
+</section>
+<section class="quick-stats"><div><strong>PY</strong><span>Python tabanlı</span></div><div><strong>WEB</strong><span>Tarayıcıda oynama</span></div><div><strong>0 TL</strong><span>Ücretsiz araçlarla başla</span></div></section>
+<section class="library" id="games">
+  <div class="section-head"><div><p class="eyebrow">OYUN KÜTÜPHANESİ</p><h2>Bir oyun seç. <span>Hemen başla.</span></h2></div><input id="search" type="search" placeholder="Oyun ara…" aria-label="Oyun ara"></div>
+  <div class="filters"><button class="active" data-filter="all">Tüm oyunlar</button><button data-filter="arcade">Arcade</button><button data-filter="puzzle">Bulmaca</button></div>
+  <div class="cards" id="cards">
+    <article class="game" data-category="arcade" data-name="Neon Dodge">
+      <a href="games/neon-dodge/index.html" class="cover neon"><span class="tag">PYGAME · 2D</span><div class="glow-player"></div><span class="cover-bottom">01 / ARCADE</span></a>
+      <div class="game-info"><div><h3>Neon Dodge</h3><p>Neon engellerden kaç, rekorunu kır.</p></div><span class="pill">2D</span></div>
+      <a class="play" href="games/neon-dodge/index.html">Oyunu aç <b>→</b></a>
+    </article>
+    <article class="game" data-category="puzzle" data-name="Pixel Lab">
+      <div class="cover pixel"><span class="tag">PYGAME · 2D</span><div class="pixels"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="cover-bottom">02 / PUZZLE</span></div>
+      <div class="game-info"><div><h3>Pixel Lab</h3><p>Bir sonraki oyunun için yer hazır.</p></div><span class="pill">2D</span></div>
+      <button class="play soon" data-soon="Pixel Lab">Yakında <b>↗</b></button>
+    </article>
+    <article class="game" data-category="arcade" data-name="Orbit Quest">
+      <div class="cover orbit"><span class="tag">YENİ DÜNYALAR</span><div class="planet"></div><span class="cover-bottom">03 / EXPLORE</span></div>
+      <div class="game-info"><div><h3>Orbit Quest</h3><p>Yeni bir macera geliştirme aşamasında.</p></div><span class="pill">2D/3D</span></div>
+      <button class="play soon" data-soon="Orbit Quest">Geliştiriliyor <b>↗</b></button>
+    </article>
+    <article class="game" data-category="arcade" data-name="Football Arena">
+      <a href="games/football-arena/index.html" class="cover football"><span class="tag">FUTBOL · DÜELLO</span><div class="football-ball">⚽</div><span class="cover-bottom">04 / FOOTBALL</span></a>
+      <div class="game-info"><div><h3>Football Arena</h3><p>Galatasaray ve Fenerbahçe oyuncularını karşı karşıya getir.</p></div><span class="pill">2D</span></div>
+      <a class="play" href="games/football-arena/index.html">Oyunu aç <b>→</b></a>
+    </article>
+  </div>
+  <p id="empty" hidden>Bu aramayla eşleşen oyun yok.</p>
+</section>
+
+<!-- PROFESYONEL ALT BÖLÜM -->
+<section class="about-section" id="how">
+  <div class="about-top">
+    <p class="about-kicker">ARDA IS GAMES DENEYİMİ</p>
+    <h2>Sadece oyun değil,<br><span>yeni bir deneyim.</span></h2>
+    <p class="about-lead">Keşfet, oyna ve kendi rekorunu oluştur. Farklı dünyalardan oyunlar, tek bir yerde ve seni bekliyor.</p>
+  </div>
+  <div class="feature-grid">
+    <article class="feature-card">
+      <div class="feature-icon">⌁</div>
+      <h3>Hemen oyna</h3>
+      <p>Uzun kurulumlarla uğraşma. Desteklenen oyunları tarayıcından aç ve maceraya katıl.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-icon">✧</div>
+      <h3>Yeni dünyalar keşfet</h3>
+      <p>Arcade, bulmaca ve farklı oyun türleri arasından kendi favorini bul.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-icon">♛</div>
+      <h3>Rekorunu geliştir</h3>
+      <p>Her oyunda biraz daha ilerle, becerilerini dene ve kendi en iyi skorunu hedefle.</p>
+    </article>
+  </div>
+  <div class="about-cta">
+    <p><strong>Bir sonraki favori oyunun burada olabilir.</strong><br>Oyun kütüphanesini keşfetmeye başla.</p>
+    <a href="#games">Oyunları keşfet <span>→</span></a>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a class="logo" href="#"><span class="logo-icon">P</span> Arda <span> Is Games</span></a>
+      <p>Bağımsız oyunların buluşma noktası. Keşfet, oyna ve eğlencenin bir parçası ol.</p>
+    </div>
+    <div class="footer-column">
+      <h4>KEŞFET</h4>
+      <a href="#games">Tüm oyunlar</a>
+      <a href="#games">Arcade</a>
+      <a href="#games">Bulmaca</a>
+    </div>
+    <div class="footer-column">
+      <h4>ARDA IS GAMES</h4>
+      <a href="#how">Hakkımızda</a>
+      <a href="mailto:iletisim@ardaisgames.com">İletişim</a>
+      <a href="#games">Oyun kütüphanesi</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Arda Is Games. Tüm hakları saklıdır.</span>
+    <a href="#">Sayfanın başına dön ↑</a>
+  </div>
+</footer>
+<div id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
